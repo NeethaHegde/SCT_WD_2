@@ -1,0 +1,102 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: black; 
+    justify-content: center;  
+    display: flex;
+}
+.container {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+}
+.outer-circle{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    display: flex;
+    background: linear-gradient(45deg, red, yellow, green, blue, purple);
+    background-size: 400% 400%; /* Make the gradient larger for animation */
+    animation: gradientAnimation 10s ease infinite; /* Animate the gradient */
+}
+.inner-circle{
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    align-items: center;
+    background-color: black;
+    justify-content: center;
+    display: flex;
+}
+.timer-display{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 15px;
+    color: white;
+    font-size: 24px;
+}
+.buttons{
+    width: 100%;
+    margin: 60px auto 0 auto;
+    display: flex;
+    justify-content: space-around ;
+}
+.buttons button{
+    width: 120px;
+    height: 45px;
+    background-color:bisque;
+    color: black;
+    border:1px beige;
+    font-family: 'Poppins',sans-serif;
+    font-size: 13px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    margin: 0 10px;
+}
+.buttons button:nth-last-child(2){
+    background-color: bisque;
+} 
+.buttons button:nth-last-child(1){
+    background-color:bisque;
+}
+.buttons button:hover {
+    background-color: blanchedalmond;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Light shadow on hover for clarity */
+}
+
+#lap-list {
+    list-style-type: none; 
+    padding: 0; 
+    margin-top: 20px; 
+    color: white;
+}
+
+#lap-list li {
+    background-color: #333;  
+    color: white; 
+    margin: 5px 0; 
+    padding: 10px; 
+    border-radius: 5px; 
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2); 
+}
+.gradient-background {
+    background: linear-gradient(45deg, red, yellow, green, blue, purple);
+    background-size: 400% 400%; /* Make the gradient larger for animation */
+    animation: gradientAnimation 10s ease infinite; /* Animate the gradient */
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
